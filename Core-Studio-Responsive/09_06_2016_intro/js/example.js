@@ -10,11 +10,11 @@ console.log(number);
 
 //functions
 function addition(a,b){
-    var c = a * b;
+    var c = a + b;
     return c;
 }
-
-var result = addition(23,23457);
+  
+var result = addition(number,words);
 console.log(result);
 console.log("-------------");
 
