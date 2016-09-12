@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'FontAwesome';
+    src:url('fonts/fontawesome-webfont.eot');
+    src:url('fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/fontawesome-webfont.ttf') format('truetype'),
+        url('fonts/fontawesome-webfont.woff') format('woff'),
+        url('fonts/Efontawesome-webfont.svg#Elusive-Icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    height:100vh;
+    width:100vw;
+    margin:0px;
+    padding:0px;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+
+}
+
+.navbar{
+    background-color: #ff2d55;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 0px;
+}
+
+.navbar:after{
+    height: 0px;
+}
+
+.page a{
+    color: gray;
+}
+
+.page{
+    background-color: rgb(45, 45, 45);
+    padding: 10%;
+    color: white;
+    font-size: 130%;
+}
+
+#tab1 p, #distance-to-ship{
+    color: #f5ff1c;
+}
+
+.demo-icon-1:after{
+    font-family: "FontAwesome";
+    content: "\f05a";
+    color: gray;
+    font-size: 150%;
+}
+
+.demo-icon-3:after{
+    font-family: "FontAwesome";
+    content: "\f013";
+    color: gray;
+    font-size: 150%;
+}
+
+.demo-icon-2:after{
+    font-family: "FontAwesome";
+    content: "\f278";
+    color: gray;
+    font-size: 150%;
+}
+
+.center{
+    text-align: center;
+}
+
+
+.shake{
+    -webkit-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@-webkit-keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+}

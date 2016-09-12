@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" type="text/css" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Framework 7 Example</title>
+</head>
+
+<body class="theme-white">
+    
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    
+    <!-- Panels overlay -->
+    <div class="panel-overlay"></div>
+    
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+        <a href="#about" class="close-panel">About</a>
+      </div>
+    </div>
+    
+    <!-- Views -->
+    <div class="views">
+      
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+              
+                <div class="navbar-inner" >
+                    <div class="center sliding">Awesome</div>
+                        <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars color-white"></i></a>
+                    </div>
+
+                </div>
+
+                <!--  Each page needs a navbar defined-->
+                <div class="navbar-inner cached" data-page="about">
+                    <div class="left">
+                        <a href="#" class="back link"><i class="icon icon-back"></i></a>
+                    </div>
+                    <div class="center sliding">About</div>
+                </div>
+
+            </div>
+        
+
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <p>Proin vitae neque sapien. Quisque vitae aliquet enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed quis arcu purus. Vivamus nec ante lacus. Mauris ut orci at turpis luctus volutpat ac sed metus. Donec sed arcu posuere, semper nunc id, pellentesque sapien. Aliquam in turpis quis felis mollis tincidunt quis sit amet odio. Vestibulum vel est augue. Ut vel nulla sed elit dictum cursus ac ac magna. Phasellus quis arcu pulvinar, laoreet neque eget, tincidunt orci. Quisque feugiat enim varius rhoncus bibendum. Etiam quis mi aliquam, bibendum erat non, placerat mauris. Curabitur hendrerit elit vitae fermentum pretium.</p>
+                        <a href="#about">MORE ABOUT THIS PROJECT</a><br/><br/><br/>
+                    </div>
+                </div>
+
+                <div data-page="about" class="page cached">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <p>In ultrices dui felis, eu vulputate ante suscipit a. Fusce ut ultricies ante. Proin eget malesuada ligula. Proin facilisis ullamcorper sodales. Sed nulla dui, interdum vestibulum purus a, fringilla tristique erat. Donec non purus sapien. Nullam tempor sed quam ut bibendum. Nulla facilisis odio sed tincidunt elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent dictum metus vel lacus porta ornare. Integer et ex sit amet sapien posuere scelerisque eu et nisl. Mauris sapien lacus, volutpat ut vestibulum sit amet, egestas ut justo. Sed hendrerit, eros in pretium consectetur, nibh turpis laoreet neque, in aliquam lorem quam porta metus</p>
+                    </div>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+    </script>
+
+</body>
+
+</html>

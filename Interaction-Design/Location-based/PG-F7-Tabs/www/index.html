@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" type="text/css" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link href='js/mapbox.css' rel='stylesheet' />
+    <title>Framework 7 Example</title>
+</head>
+
+<body>
+    
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    
+    <!-- Panels overlay -->
+    <div class="panel-overlay"></div>
+    
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+        <a href="#about" class="close-panel">About</a>
+      </div>
+    </div>
+    
+    <!-- Views -->
+    <div class="views tabs toolbar-fixed">
+
+        <div id="tab1" class="view tab ">
+            <div data-page="index" class="page">
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <p class="center" id="about"><img id="logo" src="images/alien_big.png" class="shake" style="width:150px;height:auto;"/></p>
+                    <p>Proin vitae neque sapien. Quisque vitae aliquet enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed quis arcu purus. Vivamus nec ante lacus. Mauris ut orci at turpis luctus volutpat ac sed metus. Donec sed arcu posuere, semper nunc id, pellentesque sapien. Aliquam in turpis quis felis mollis tincidunt quis sit amet odio. Vestibulum vel est augue. Ut vel nulla sed elit dictum cursus ac ac magna. Phasellus quis arcu pulvinar, laoreet neque eget, tincidunt orci. Quisque feugiat enim varius rhoncus bibendum. Etiam quis mi aliquam, bibendum erat non, placerat mauris. Curabitur hendrerit elit vitae fermentum pretium.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="tab2" class="view tab active">
+            <div data-page="index" class="page"  id="map">
+            
+            </div>
+        </div>
+
+        <div id="tab3" class="view tab">
+            <div data-page="index" class="page center">
+                <h3>Distance to Spaceship:</h3>
+                <p id="distance-to-ship"></p>
+            </div>
+        </div>
+
+
+        <div class="toolbar tabbar">
+            <div class="toolbar-inner">
+            <a href="#tab1" class="tab-link active"><i class="icon demo-icon-1"></i></a>
+            <a href="#tab2" class="tab-link show-tab-2"><i class="icon demo-icon-2"></i></a>
+            <a href="#tab3" class="tab-link"><i class="icon demo-icon-3"></i></a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        
+        document.addEventListener("deviceready", onDeviceReady, false);
+        onDeviceReady();
+
+    </script>
+
+</body>
+
+</html>
