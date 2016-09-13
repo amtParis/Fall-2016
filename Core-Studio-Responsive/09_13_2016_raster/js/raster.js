@@ -4,9 +4,13 @@ canvas.width = window.innerWidth;
 canvas.height= window.innerHeight;
 var ctx = canvas.getContext("2d");
 var image = document.getElementById("andy");
+var offsetX;
 
 function setup(){
-  setTimeout(draw,1000);
+
+  offsetX = window.innerWidth/2 - (image.width *2)/2;
+
+  draw();
 }
 
 function draw(){
@@ -25,20 +29,22 @@ function draw(){
       var a = data[index+3];
       var grey = Math.round(r*0.3 + g*0.59 + b*0.11);
       if(grey>50){
-        var radius = Math.round((grey/255)*12) + Math.random();
-        ctx.fillStyle = "rgba("+r+","+g+","+b+",0.5)";
-        //ctx.fillStyle = "rgba(255,255,255,0.5)";
+        var radius = Math.round((grey/255)*6) + Math.random();
+        //ctx.fillStyle = "rgba("+r+","+g+","+b+",0.5)";
+        ctx.fillStyle = "rgba(255,255,255,1)";
         ctx.beginPath();
         //ctx.rect(i,j,2,2);
-        ctx.arc(i*2,j*2,radius,0,Math.PI*2,false);
+        ctx.arc(offsetX+i*2,j*2,radius,0,Math.PI*2,false);
         ctx.fill();
         ctx.closePath();
       }
 
     }
   }
+
+
   requestAnimationFrame(draw);
 }
 
 
-setup();
+setTimeout(setup,1000); // to make sure image is available

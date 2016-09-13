@@ -10,6 +10,6 @@ canvas{
 }
 
 @font-face {
-    font-family: 'brown';
-    src: url('../BrownProTT-Light.ttf');
+    font-family: 'brownbold';
+    src: url('../BrownProTT-Bold.ttf');
 }
