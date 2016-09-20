@@ -26,11 +26,6 @@ Shape.prototype = {
     this.context.moveTo(x+sideX,y+sideY);
     this.context.lineTo(x+sideX,y);
   }
-  drawHorizontalLines:function(x,y,sideX,sideY){
-    this.context.moveTo(x,y);
-    this.context.lineTo(x+sideX,y);
-    this.context.moveTo(x,y+sideY);
-    this.context.lineTo(x+sideX,y+sideY);
-  }
+
 
 }
