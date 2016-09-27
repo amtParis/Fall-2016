@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Basic Three.js Cube Shadow Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  
+    <style>
+      body{
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="world"></div>
+
+    <script src="js/threejs/three.js"></script>
+    <script>
+     
+        var scene, camera, renderer, cube;
+
+        init();
+        animate();
+
+        function init(){
+
+            // define our scene
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color( 0xffffff );
+            // add some fog to the scene
+            scene.fog = new THREE.FogExp2( 0x0ffffff, 0.1 );
+
+            
+            // --- camera
+            // set up a camera with fov, aspect ratio, near, far clipping places
+            camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+            
+            // move camera  back so we can see things
+            camera.position.z = 5;
+            camera.position.y= 1;
+
+            // add camera to the scene
+            scene.add(camera);
+            
+            
+            // --- renderer
+            // create the rendereer and set its size
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            renderer.shadowMap.enabled = true;
+
+            // add renderer to page element
+            var container = document.getElementById( 'world' );
+            container.appendChild( renderer.domElement );
+
+            
+            // --- cube
+            // make some geometry and material so it has color
+            var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+            var material = new THREE.MeshLambertMaterial( { color: 0x68c3c0 } );
+            
+            // make a mesch with geometry and material and add it to the scene
+            cube = new THREE.Mesh( geometry, material );
+            cube.castShadow = true; // Needs to cast shadows
+            scene.add( cube );
+
+            // --- ground plane
+            geometry = new THREE.PlaneGeometry(200,200);
+            material = new THREE.MeshLambertMaterial( { color: 0x68c3c0 } ); 
+            var plane = new THREE.Mesh(geometry,material);
+            plane.rotation.x = -Math.PI/2.0;
+            plane.position.y = -.8;
+            plane.receiveShadow = true;  // Need to receive shadows
+            scene.add( plane);
+
+            // --- lights
+            var light = new THREE.AmbientLight( 0x808080 ); // soft white light
+            scene.add( light );
+
+            var shadowLight = new THREE.DirectionalLight(0xffffff, .75);
+            shadowLight.position.set(10, 50, 100);
+            shadowLight.castShadow = true;
+            scene.add(shadowLight);
+            
+
+        }
+
+        function animate(){
+
+          cube.rotation.y += .01;
+          cube.rotation.z += .01;
+          renderer.render(scene, camera);
+          
+          requestAnimationFrame(animate);
+          
+        }
+
+     
+     </script>
+
+
+  </body>
+  </html>

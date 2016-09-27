@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Basic Three.js Cube Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  
+    <style>
+      body{
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+     <div id="world"></div>
+
+     <script src="js/threejs/three.js"></script>
+     <script>
+     
+        var scene, camera, renderer, cube;
+
+        init();
+        animate();
+
+        function init(){
+
+            //------- scene
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color( 0xffffff );
+
+            //------- camera
+            // set up a camera with fov, aspect ratio, near, far clipping places
+            camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+            
+            // move camera  back so we can see things
+            camera.position.z = 5;
+
+            // add camera to the scene
+            scene.add(camera);
+
+            
+            //------- renderer
+            // create the rendereer and set its size
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+
+            // add renderer to page element
+            var container = document.getElementById( 'world' );
+            container.appendChild( renderer.domElement );
+
+
+            //------- cube
+            // make some geometry and material so it has color
+            var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+            var material = new THREE.MeshLambertMaterial( { color: 0x68c3c0 } );
+            
+            // make a mesch with geometry and material and add it to the scene
+            cube = new THREE.Mesh( geometry, material );
+            scene.add( cube ); 
+
+            
+            //------- lights
+            // add a point light
+            var light = new THREE.PointLight( 0xffffff );
+            light.position.set( 10, 50, 1000 );
+            scene.add( light );            
+
+        }
+
+        function animate(){
+
+          cube.rotation.y += .01;
+          cube.rotation.z += .01;
+          renderer.render(scene, camera);
+
+          requestAnimationFrame(animate);
+          
+
+        }
+
+        
+     </script>
+
+
+  </body>
+  </html>
