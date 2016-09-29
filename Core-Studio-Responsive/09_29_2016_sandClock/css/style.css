@@ -1,0 +1,19 @@
+html,body{
+  margin:0px;
+  padding:0px;
+  width:100%;
+  height:100%;
+}
+body{
+  background-size: cover;
+}
+canvas{
+  width:100%;
+  height:100%;
+}
+img{display:none;}
+
+@font-face {
+    font-family: 'brownbold';
+    src: url('../BrownProTT-Bold.ttf');
+}
