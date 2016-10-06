@@ -27,7 +27,7 @@ function draw(){
   var hours = (date.getHours()<10)?"0"+date.getHours():date.getHours();
   var minutes = (date.getMinutes()<10)?"0"+date.getMinutes():date.getMinutes();
   var seconds = (date.getSeconds()<10)?"0"+date.getSeconds():date.getSeconds();
-  //text = "It is "+hours+"h "+minutes+ " " + seconds+"  ";
+  text = "It is "+hours+"h "+minutes+ " " + seconds+"  ";
   console.log(date.getSeconds());
 
   for(var j = 0;j<image.height;j+=8){
@@ -40,7 +40,7 @@ function draw(){
       var grey = Math.round(r*0.3 + g*0.59 + b*0.11);
       if(grey>50){
         var radius = Math.round((grey/255)*20) + Math.random()*2;
-        ctx.fillStyle = "rgba("+r+","+g+","+b+",0.1)";
+        ctx.fillStyle = "rgba("+r+","+g+","+b+",0.05)";
         ctx.beginPath();
         ctx.arc(offsetX+i*scale,offsetY+j*scale,radius,0,Math.PI*2,false);
         ctx.fill();
