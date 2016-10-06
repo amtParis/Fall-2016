@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>Creative coding</title>
+    <style>
+
+    body {
+        background-image:url('stars.gif');
+        background-size:100%;
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+        height:100%;
+        width:100%;
+    }
+
+    h4 {
+
+    color: white;
+    }
+    div {
+    opacity: 0.5;
+}
+
+    style="text/css">
+    .example1 {
+     height: 100px;
+     overflow: hidden;
+     position: relative;
+    }
+    .example1 h4 {
+    font-family: 'Bungee Hairline', cursive;
+    font-size: 150%;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     margin: 10;
+     line-height: 50px;
+     text-align: inherit;;
+     white-space: nowrap;
+     /* Starting position */
+     -moz-transform:translateX(100%);
+     -webkit-transform:translateX(100%);
+     transform:translateX(100%);
+     /* Apply animation to this element */
+     -moz-animation: example1 10s linear infinite;
+     -webkit-animation: example1 15s linear infinite;
+     animation: example1 15s linear infinite;
+    }
+    /* Move it (define the animation) */
+    @-moz-keyframes example1 {
+     0%   { -moz-transform: translateX(100%); }
+     100% { -moz-transform: translateX(-100%); }
+    }
+    @-webkit-keyframes example1 {
+     0%   { -webkit-transform: translateX(100%); }
+     100% { -webkit-transform: translateX(-100%); }
+    }
+    @keyframes example1 {
+     0%   {
+     -moz-transform: translateX(100%); /* Firefox bug fix */
+     -webkit-transform: translateX(100%); /* Firefox bug fix */
+     transform: translateX(100%);
+     }
+     100% {
+     -moz-transform: translateX(-100%); /* Firefox bug fix */
+     -webkit-transform: translateX(-100%); /* Firefox bug fix */
+     transform: translateX(-100%);
+     }
+    }
+
+
+</style>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  </head>
+
+  <body>
+    <div class="example1">
+<h4>EVERY SINGLE MINUTE COUNTS DO NOT WASTE YOUR TIME EVERY SECOND YOU LOSE IS LOST IN SPACE AND YOU WILL NEVER GET IT BACK DO NOT WASTE YOUR PRECIOUS TIME IT IS WORTH MORE THAN GOLD EVERY HOUR YOU LOSE IS DESTROYED AND CAN NEVER BE TAKEN BACK    </h4>
+</div>
+
+    <canvas id="canvas"></canvas>
+
+    <img src = "smokey1.png" id = "image"/>
+    <script type="text/javascript" src="js/Shape.js"></script>
+    <script type="text/javascript" src="js/Particle.js"></script>
+    <script type="text/javascript" src="js/Decoder.js"></script>
+    <script type="text/javascript" src="js/font.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
+  </body>
+</html>
