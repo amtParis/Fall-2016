@@ -3,6 +3,7 @@ var canvas  = document.getElementById("canvas");
 canvas.width = window.innerWidth;
 canvas.height= window.innerHeight;
 var ctx = canvas.getContext("2d");
+//ctx.globalCompositeOperation = 'lighten';
 var XSquareNbr;
 var YSquareNbr;
 var edgeSize;
@@ -17,7 +18,7 @@ var memory = [];
 
 function setup(){
   var tempoVar = 1;
-  edgeSize = 10;
+  edgeSize = 20;
   sentence = updateTime();
   offsetY = window.innerHeight/2 - (7*edgeSize)/2;
   offsetX = window.innerWidth/2 - (sentence.length*6*edgeSize)/2;
@@ -49,6 +50,7 @@ function draw(){
   sentence = updateTime();
 
   ctx.fillStyle = 'black';
+  //ctx.fillStyle = 'rgba(0,0,0,0.09)';
   //ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
   ctx.fillRect(0,0,window.innerWidth,window.innerHeight);
   for(var k=0;k<sentence.length;k++){

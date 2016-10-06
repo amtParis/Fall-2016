@@ -14,7 +14,7 @@ var Particle = function(ctx,x,y){
 Particle.prototype = {
 
   initParticles:function(){
-    for(var i = 0;i<3;i++){
+    for(var i = 0;i<5;i++){
       var shape = new Shape(this.ctx,this.x,this.y);
       this.allParticles.push(shape);
     }
@@ -33,15 +33,19 @@ Particle.prototype = {
   },
 
   draw:function(){
-      this.ctx.fillStyle = this.color;
+      //this.ctx.fillStyle = this.color;
       for(var i = 0;i<this.allParticles.length;i++){
         this.ctx.beginPath();
         if(this.allParticles[i].isMoving){
+          this.allParticles[i].color = (i%3==0)?'white':'red';
           this.allParticles[i].speedY+=this.gravity;
           this.allParticles[i].x+=this.allParticles[i].speedX;
           this.allParticles[i].y+=this.allParticles[i].speedY;
         }
         this.allParticles[i].drawCircle();
+        //this.allParticles[i].drawTriangle();
+        //this.allParticles[i].drawTree();
+        this.ctx.fillStyle = this.allParticles[i].color;
         this.ctx.fill();
         this.ctx.closePath();
         if(this.allParticles[i].y>window.innerHeight){
