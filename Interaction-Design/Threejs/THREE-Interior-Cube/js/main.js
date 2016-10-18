@@ -60,14 +60,14 @@ function animate(){
 function addLights(){
     
     var amblight = new THREE.AmbientLight( 0xffffff, .25 ); // soft white light
-    //scene.add( light );
+    //scene.add( amblight );
 
-    var dirLight = new THREE.DirectionalLight(0xffffff, .75);
+    var dirLight = new THREE.DirectionalLight(0xffffff, .5);
     dirLight.position.set(20, 50, 10);
-    //shadowLight.castShadow = true;
+    dirLight.castShadow = true;
     //scene.add(dirLight);
 
-    var pointLight = new THREE.PointLight(0x00ff00, 1, 100);
+    pointLight = new THREE.PointLight(0x00ff00, 1, 100);
     pointLight.position.set( 60, -70, 0 );
     scene.add(pointLight);
     scene.add(new THREE.PointLightHelper(pointLight, 1));
@@ -104,6 +104,7 @@ function addRoom(){
 
     var geometry = new THREE.CubeGeometry(150, 150, 150, 1, 1, 1);
     var room = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+    
     room.receiveShadow = true;
     scene.add( room ); 
 }
