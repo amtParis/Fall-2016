@@ -95,13 +95,15 @@ function draw() {
     }
     
     
+    //overall CHECKER
+    // to check if any Insect has reached any food
+    // that function will change each food and insect properties
+    overAllCheck(allInsect,allFoodOnStage);
+    
     
     //insect
     for(var i = 0; i < allInsect.length; i++) {
-        //overall CHECKER
-        // to check if any Insect has reached any food
-        // that function will change each food and insect properties
-        overAllCheck(allInsect,allFoodOnStage);
+        
         
         // for all insects, we'll be checking their distance with all food on stage.
         // it's the function that will change the insect's direction
