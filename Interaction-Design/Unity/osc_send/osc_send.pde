@@ -30,3 +30,7 @@ void mouseDragged() {
   oscP5.send(myMessage, myHost);
 }
 
+void mousePressed(){
+  OscMessage myMessage = new OscMessage("/ball");
+  oscP5.send(myMessage, myHost);
+}
