@@ -22,9 +22,32 @@ function setup(){
 
     //-----
     
-    setTimeout(showParticle,3000);
+    //setTimeout(showParticle,3000);
+    
+    document.addEventListener('touchstart', ontouchstart);
     
     draw();
+}
+
+function ontouchstart(e){
+   
+    switch(e.touches.length){
+        case 1:
+            
+        break;
+        case 2:
+            
+        break;
+        case 3:
+            showParticle();
+        break;
+        case 4:
+            
+        break;
+        case 5:
+            removeAllParticles();
+        break;
+    }
 }
 
 function showParticle(){
@@ -47,7 +70,16 @@ function showParticle(){
         m_Particle.push(returning);
     }
     
-    setTimeout(showParticle,10);
+    //setTimeout(showParticle,10);
+    
+}
+
+function removeAllParticles(){
+    if(d_Particle.length>0){
+       var returning = d_Particle.shift();
+       m_Particle.push(returning);
+       removeAllParticles();
+    }
     
 }
 
