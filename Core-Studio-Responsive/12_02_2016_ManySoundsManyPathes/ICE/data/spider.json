@@ -1,0 +1,156 @@
+{"frames": [
+
+{
+	"filename": "spider_01_Calque-1.png",
+	"frame": {"x":2,"y":2,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_02_Calque-2.png",
+	"frame": {"x":2,"y":180,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_03_Calque-3.png",
+	"frame": {"x":2,"y":358,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_04_Calque-4.png",
+	"frame": {"x":2,"y":536,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_05_Calque-5.png",
+	"frame": {"x":180,"y":2,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_06_Calque-6.png",
+	"frame": {"x":358,"y":2,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_07_Calque-7.png",
+	"frame": {"x":536,"y":2,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_08_Calque-8.png",
+	"frame": {"x":180,"y":180,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_09_Calque-9.png",
+	"frame": {"x":180,"y":358,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_10_Calque-10.png",
+	"frame": {"x":180,"y":536,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_11_Calque-11.png",
+	"frame": {"x":358,"y":180,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_12_Calque-12.png",
+	"frame": {"x":536,"y":180,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_13_Calque-13.png",
+	"frame": {"x":358,"y":358,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_14_Calque-14.png",
+	"frame": {"x":358,"y":536,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_15_Calque-15.png",
+	"frame": {"x":536,"y":358,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "spider_16_Calque-16.png",
+	"frame": {"x":536,"y":536,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "spider.png",
+	"format": "RGBA8888",
+	"size": {"w":714,"h":714},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:701334683bb65738e57d58e31c2374fd:0722e26ccfb95e4ff6b554546c6fc11d:1061686de59298529f6a4fc7550209ec$"
+}
+}
